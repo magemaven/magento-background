@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE_AFL.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+*
+* @category    Magemaven
+* @package     Magemaven_Background
+* @copyright   Copyright (c) 2011-2012 Sergey Storchay <r8@r8.com.ua>
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*/
+-->
+<config>
+    <sections>
+        <design>
+            <groups>
+                <background translate="label" module="background">
+                    <label>Background</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>45</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <background_image translate="label" module="background">
+                            <label>Background Image</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">design/background</upload_dir>
+                            <base_url type="media" scope_info="1">design/background</base_url>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                        </background_image>
+                    </fields>
+                </background>
+            </groups>
+        </design>
+    </sections>
+</config>
