@@ -19,6 +19,11 @@
         </Magemaven_Background>
     </modules>
     <global>
+        <models>
+            <background>
+                <class>Magemaven_Background_Model</class>
+            </background>
+        </models>
         <helpers>
             <background>
                 <class>Magemaven_Background_Helper</class>
@@ -30,4 +35,12 @@
             </background>
         </blocks>
     </global>
+    <default>
+        <design>
+            <background>
+                <image></image>
+                <mode>none</mode>
+            </background>
+        </design>
+    </default>
 </config>
