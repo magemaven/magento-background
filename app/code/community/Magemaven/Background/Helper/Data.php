@@ -12,5 +12,29 @@
  */
 class Magemaven_Background_Helper_Data extends Mage_Core_Helper_Abstract
 {
+    /**
+     * Config XML paths
+     */
+    const XML_PATH_BACKGROUND_IMAGE = 'design/background/image';
+    const XML_PATH_BACKGROUND_MODE  = 'design/background/mode';
 
+    /**
+     * Get Background image settings
+     *
+     * @return mixed
+     */
+    public function getBackgroundImage()
+    {
+        return Mage::getStoreConfig(self::XML_PATH_BACKGROUND_IMAGE);
+    }
+
+    /**
+     * Get Background mode settings
+     *
+     * @return mixed
+     */
+    public function getBackgroundMode()
+    {
+        return Mage::getStoreConfig(self::XML_PATH_BACKGROUND_MODE);
+    }
 }

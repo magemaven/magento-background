@@ -38,7 +38,7 @@
     <default>
         <design>
             <background>
-                <image></image>
+                <image />
                 <mode>none</mode>
             </background>
         </design>
