@@ -35,6 +35,15 @@
             </background>
         </blocks>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <background>
+                    <file>background.xml</file>
+                </background>
+            </updates>
+        </layout>
+    </frontend>
     <default>
         <design>
             <background>
