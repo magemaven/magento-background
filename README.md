@@ -11,4 +11,4 @@ Module should work out of the box after install.
 Usage
 -----
 
-After install go to ```System > Configuration > Design > Background``` and configure background settings.
+After installation go to ```System > Configuration > Design > Background``` and change background settings.
