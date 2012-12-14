@@ -10,14 +10,20 @@
  * @copyright   Copyright (c) 2011-2012 Sergey Storchay <r8@r8.com.ua>
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-class Magemaven_Background_Model_System_Config_Source_Background_Mode
+class Magemaven_Background_Model_Source_Mode
 {
+    const MODE_NONE = 'none';
+    const MODE_TOP_CENTER = 'top-center';
+    const MODE_REPEAT = 'repeat';
+
     public function toOptionArray()
     {
+        $helper = Mage::helper('background');
+
         return array(
-            array('value' => 'none', 'label' => 'Do Not Show'),
-            array('value' => 'top-center', 'label' => 'Top Center'),
-            array('value' => 'repeat', 'label' => 'Repeat'),
+            array('value' => self::MODE_NONE, 'label' => $helper->__('Do Not Show')),
+            array('value' => self::MODE_TOP_CENTER, 'label' => $helper->__('Top Center')),
+            array('value' => self::MODE_REPEAT, 'label' => $helper->__('Repeat')),
         );
     }
 }

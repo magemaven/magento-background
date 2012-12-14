@@ -11,16 +11,30 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-    $_mode  = Mage::helper('background')->getBackgroundMode();
-    $_image = Mage::helper('background')->getBackgroundImage();
+    /** @var $_helper Magemaven_Background_Helper_Data */
+    $_helper = Mage::helper('background');
+
+    $_mode  = $_helper->getBackgroundMode();
+    $_image = $_helper->getBackgroundImage();
 ?>
-<?php if ($_mode != 'none' && $_image): ?>
+<?php if ($_mode != Magemaven_Background_Model_Source_Mode::MODE_NONE && $_image): ?>
     <?php
-        $_imageUrl = Mage::helper('background')->getBaseMediaUrl() . '/' . $_image;
+        $_imageUrl = $_helper->getBaseMediaUrl() . '/' . $_image;
+
+        switch ($_mode) {
+            case Magemaven_Background_Model_Source_Mode::MODE_TOP_CENTER:
+                $_backgroundOptions = 'top center no-repeat';
+                break;
+            case Magemaven_Background_Model_Source_Mode::MODE_REPEAT:
+                $_backgroundOptions = 'repeat';
+                break;
+            default:
+                $_backgroundOptions = '';
+        }
     ?>
     <style type="text/css">
         body {
-            background: url(<?php echo $_imageUrl ?>) top center no-repeat;
+            background: url(<?php echo $_imageUrl ?>) <?php echo $_backgroundOptions ?>;
         }
     </style>
 <?php endif;?>
