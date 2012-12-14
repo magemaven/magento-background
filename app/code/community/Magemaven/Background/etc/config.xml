@@ -43,7 +43,27 @@
                 </background>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <Magemaven_Background>
+                    <files>
+                        <default>Magemaven_Background.csv</default>
+                    </files>
+                </Magemaven_Background>
+            </modules>
+        </translate>
     </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Magemaven_Background>
+                    <files>
+                        <default>Magemaven_Background.csv</default>
+                    </files>
+                </Magemaven_Background>
+            </modules>
+        </translate>
+    </adminhtml>
     <default>
         <design>
             <background>
