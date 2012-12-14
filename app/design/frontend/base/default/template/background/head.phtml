@@ -15,9 +15,12 @@
     $_image = Mage::helper('background')->getBackgroundImage();
 ?>
 <?php if ($_mode != 'none' && $_image): ?>
-<style type="text/css">
-    body {
-        background: url();
-    }
-</style>
+    <?php
+        $_imageUrl = Mage::helper('background')->getBaseMediaUrl() . '/' . $_image;
+    ?>
+    <style type="text/css">
+        body {
+            background: url(<?php echo $_imageUrl ?>) top center no-repeat;
+        }
+    </style>
 <?php endif;?>

@@ -16,7 +16,7 @@ class Magemaven_Background_Model_System_Config_Source_Background_Mode
     {
         return array(
             array('value' => 'none', 'label' => 'Do Not Show'),
-            array('value' => 'center', 'label' => 'Center'),
+            array('value' => 'top-center', 'label' => 'Top Center'),
             array('value' => 'repeat', 'label' => 'Repeat'),
         );
     }

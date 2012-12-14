@@ -37,4 +37,14 @@ class Magemaven_Background_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig(self::XML_PATH_BACKGROUND_MODE);
     }
+
+    /**
+     * Get base url for backgrounds
+     *
+     * @return string
+     */
+    public function getBaseMediaUrl()
+    {
+        return Mage::getBaseUrl('media') . 'design/background';
+    }
 }
