@@ -1,5 +1,7 @@
-Magemaven Background
+[UNMAINTAINED] Magemaven Background
 ====================
+
+**This module is no longer maintained**
 
 Magento extension, that allows to set background image for store page.
 
